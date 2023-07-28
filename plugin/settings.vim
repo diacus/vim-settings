@@ -4,8 +4,6 @@
 " AUTHOR      : @diacus (diacus.magnuz@gmail.com)
 " CREATION    : Fri Jul 28 12:16:18 AM CST 2023
 " ===========================================================================
-
-set nocompatible
 syntax on
 filetype plugin indent on
 filetype plugin on
