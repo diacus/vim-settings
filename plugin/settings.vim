@@ -32,14 +32,15 @@ set textwidth=80
 " Airline setup
 if exists(':AirlineRefresh')  " Set iff airline is installed
   let g:airline_powerline_fonts = 1
-  let g:airline_left_sep = ''
-  let g:airline_right_sep = ''
+  let g:airline_left_sep = '>'
+  let g:airline_right_sep = '<'
   let g:airline_symbols.crypt = '🔒'
   let g:airline_symbols.linenr = '␤'
   let g:airline_symbols.branch = '⎇'
   let g:airline_symbols.paste = 'ρ'
   let g:airline_symbols.notexists = '∄'
   let g:airline_symbols.whitespace = '☰'
+  let g:airline#extensions#tabline#formatter = 'unique_tail'
 endif
 
 " Justify text
