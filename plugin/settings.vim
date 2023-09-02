@@ -32,8 +32,12 @@ set textwidth=80
 " Airline setup
 if exists(':AirlineRefresh')  " Set iff airline is installed
   let g:airline_powerline_fonts = 1
-  let g:airline_left_sep = '>'
-  let g:airline_right_sep = '<'
+" let g:airline_left_sep = '>'
+" let g:airline_left_sep = '▶'
+  let g:airline_left_sep = '»'
+" let g:airline_right_sep = '<'
+" let g:airline_right_sep = '◀'
+  let g:airline_right_sep = '«'
   let g:airline_symbols.crypt = '🔒'
   let g:airline_symbols.linenr = '␤'
   let g:airline_symbols.branch = '⎇'
@@ -47,3 +51,5 @@ endif
 " Vim includes a macro that justifies the text, if it is present in your
 " system, include it.
 runtime! macros/justify.vim
+
+hi Normal guibg=NONE ctermbg=NONE
