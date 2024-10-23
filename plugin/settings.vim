@@ -3,6 +3,7 @@
 " DESCRIPTION : Vim settings file.
 " AUTHOR      : @diacus (diacus.magnuz@gmail.com)
 " CREATION    : Fri Jul 28 12:16:18 AM CST 2023
+" LAST EDIT   : Wed Oct 23 11:24:48 AM CST 2024
 " ===========================================================================
 syntax on
 filetype plugin indent on
@@ -24,19 +25,15 @@ set path+=**
 set ruler
 set t_Co=256
 set wildmenu
-" let &wildignore=s:files_ignored
 set splitbelow
 set splitright
 set textwidth=80
+set cmdheight=2 " for details see :help netrw-p10<CR>
 
 " Airline setup
-if exists(':AirlineRefresh')  " Set iff airline is installed
+if exists(':AirlineRefresh')
   let g:airline_powerline_fonts = 1
-" let g:airline_left_sep = '>'
-" let g:airline_left_sep = '▶'
   let g:airline_left_sep = '»'
-" let g:airline_right_sep = '<'
-" let g:airline_right_sep = '◀'
   let g:airline_right_sep = '«'
   let g:airline_symbols.crypt = '🔒'
   let g:airline_symbols.linenr = '␤'
