@@ -1,4 +1,10 @@
-# vim-settings
+# Personal and Portable Vim Settings
+
+## Dependencies
+
+- [cURL](https://curl.se/)
+- [BASH](https://www.gnu.org/software/bash/)
+- [Vim](https://www.vim.org/)
 
 ## Installation
 1. Run the installer script, the script will install vim-plug and a `~/.vimrc` boilerplate.
