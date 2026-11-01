@@ -76,7 +76,7 @@ also adapt Vim to the Spanish and Latin American keyboard layouts.
 1. Run the installer script, the script will install vim-plug and a `~/.vimrc` boilerplate:
 
 ```shell
-curl -o- https://raw.githubusercontent.com/diacus/vim-settings/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/diacus/vim-settings/main/scripts/install.sh | bash
 ```
 
 2. Edit the downloaded `~/.vimrc` as you want — uncomment the plugins

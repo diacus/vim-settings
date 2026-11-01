@@ -41,17 +41,17 @@ CONTENTS                                              *settings-contents*
 
 BOOTSTRAP                                          *settings-bootstrap*
 
-The repository ships an installer that sets up a fresh machine:
+The repository ships an installer that sets up a fresh machine: >
 
->
-    curl -o- https://raw.githubusercontent.com/diacus/vim-settings/main/scripts/install.sh | bash
+    curl -fsSL https://raw.githubusercontent.com/diacus/vim-settings/main/scripts/install.sh | bash
 <
-
-The installer downloads vim-plug to ~/.vim/autoload/plug.vim and
-~/.vimrc, a small boilerplate based on scripts/main.vim.  The boilerplate
-defines |<Leader>| as <Space>, plugs this and the sibling plugins, and
-applies the colorscheme "nord", tinting the vertical split line
-|VertSplit| when it is loaded.
+The installer reports its own progress, since curl stays quiet.  It
+downloads vim-plug to ~/.vim/autoload/plug.vim, and ~/.vimrc, a small
+boilerplate based on scripts/main.vim; if any download fails, it stops
+with a clear error before touching ~/.vimrc.  The boilerplate defines
+|<Leader>| as <Space>, plugs this and the sibling plugins, and applies
+the colorscheme "nord" - also when the GUI startup resets the applied
+colors - tinting the vertical split line |VertSplit| when it is loaded.
 
 OPTIONS                                                *settings-options*
 
