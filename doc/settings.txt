@@ -145,11 +145,13 @@ Add your own patterns with :set: >
 
 TRANSPARENCY                                    *settings-transparency*
 
-The background is always transparent, which suits terminal emulators
-with a translucent or picture background: >
+In the terminal, the background is transparent, which suits terminal
+emulators with a translucent or picture background: >
 
     hi Normal guibg=NONE ctermbg=NONE
 <
+In the GUI this is deliberately skipped: `NONE` means the default white
+background there, so the colorscheme keeps painting its own background.
 
 AIRLINE                                                  *settings-airline*
 

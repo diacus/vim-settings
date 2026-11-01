@@ -40,7 +40,17 @@ call plug#end()
 " set g:netrw_style there if you want, see :help settings-netrw
 
 " silent! colorscheme gruvbox
-silent! colorscheme nord
-if exists('g:colors_name') && g:colors_name == 'nord'
-  highlight! VertSplit guibg=#3B4252
+function! s:apply_colorscheme() abort
+  silent! colorscheme nord
+  if exists('g:colors_name') && g:colors_name == 'nord'
+    highlight! VertSplit guibg=#3B4252
+  endif
+endfunction
+
+call s:apply_colorscheme()
+
+" The GUI applies its own settings once the vimrc is done, which may
+" reset the colors; so apply the colorscheme again when the GUI is ready
+if has('gui_running')
+  autocmd GUIEnter * call s:apply_colorscheme()
 endif
