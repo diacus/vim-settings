@@ -30,7 +30,7 @@ Plug 'diacus/vim-spelling'
 " Plug 'vim-scripts/Wombat'
 " Plug 'vim-scripts/wombat256.vim'
 " Plug 'morhetz/gruvbox'
-" Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 
 " Started to use these for Legacy.com
 " Plug 'editorconfig/editorconfig-vim'
@@ -42,4 +42,6 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 " silent! colorscheme gruvbox
 silent! colorscheme nord
-hi! VertSplit guibg=#3B4252
+if exists('g:colors_name') && g:colors_name == 'nord'
+  highlight! VertSplit guibg=#3B4252
+endif
