@@ -91,8 +91,10 @@ function! settings#platform()
 endfunction
 
 function! settings#netrw_browsex_viewer()
-  let viewers = { 'Linux': 'xdg-open', 'MacOS': 'open', 'Windows': 'expl2.cmd' }
-  return viewers[settings#platform()]
+  " Only Linux and MacOS have a known file manager tool; on Windows, netrw
+  " picks its own viewer
+  let viewers = { 'Linux': 'xdg-open', 'MacOS': 'open' }
+  return get(viewers, settings#platform(), '')
 endfunction
 
 function! settings#netrw_tree_style()
@@ -110,7 +112,10 @@ endfunction
 function! settings#netrw()
   let g:netrw_banner = 0
   " Open the files with the file manager tool of the operating system
-  let g:netrw_browsex_viewer = settings#netrw_browsex_viewer()
+  let viewer = settings#netrw_browsex_viewer()
+  if viewer != ''
+    let g:netrw_browsex_viewer = viewer
+  endif
   " Hide the dotfiles by default
   let g:netrw_hide = 1
   let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'

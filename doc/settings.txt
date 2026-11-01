@@ -252,8 +252,8 @@ NETRW                                                      *settings-netrw*
 
 The file explorer, |netrw|, is configured to hide its own help banner,
 'g:netrw_banner', and to open the files with the file manager tool of
-the operating system, 'g:netrw_browsex_viewer': xdg-open on Linux,
-open on MacOS, and the Windows explorer.
+the operating system, 'g:netrw_browsex_viewer': xdg-open on Linux, and
+open on MacOS.  On Windows, netrw picks its own viewer.
 
 The dotfiles are hidden by default.  To show them: >
 
