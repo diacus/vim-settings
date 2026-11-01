@@ -1,21 +1,6 @@
 let mapleader=" "
 
 call plug#begin()
-" Third party plugins, uncomment to install as needed
-" Plug 'airblade/vim-gitgutter'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-" Plug '/usr/local/bin/fzf'
-" Plug 'junegunn/fzf'
-" Plug 'junegunn/fzf.vim'
-" Plug 'jremmen/vim-ripgrep'
-" Plug 'tpope/vim-fugitive'
-" Plug 'tpope/vim-vinegar'
-" Plug 'vim-utils/vim-man'
-" Plug 'mbbill/undotree'
-" Plug 'uguu-org/vim-matrix-screensaver'
-" Plug 'tweekmonster/django-plus.vim'
-" Plug 'junegunn/vim-emoji'
 
 Plug 'diacus/vim-settings'
 if has('gui_running')
@@ -32,8 +17,29 @@ Plug 'diacus/vim-spelling'
 " Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
 
-" Started to use these for Legacy.com
+" ------------------------------------------------------------------------------
+"                      THIRD PARTY PLUGIN SECTION STARTS
+" ------------------------------------------------------------------------------
+" Third party plugins, uncomment to install as needed
+
+" Plug 'airblade/vim-gitgutter'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug '/usr/local/bin/fzf'
+" Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf.vim'
+" Plug 'jremmen/vim-ripgrep'
+" Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-vinegar'
+" Plug 'vim-utils/vim-man'
+" Plug 'mbbill/undotree'
+" Plug 'uguu-org/vim-matrix-screensaver'
+" Plug 'tweekmonster/django-plus.vim'
 " Plug 'editorconfig/editorconfig-vim'
+
+" ------------------------------------------------------------------------------
+"                       THIRD PARTY PLUGIN SECTION ENDS
+" ------------------------------------------------------------------------------
 call plug#end()
 
 " netrw, the file explorer, is configured by vim-settings;
