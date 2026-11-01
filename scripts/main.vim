@@ -36,9 +36,8 @@ Plug 'arcticicestudio/nord-vim'
 " Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
-let g:netrw_hide=1
-let g:netrw_liststyle=2
-let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+" netrw, the file explorer, is configured by vim-settings;
+" set g:netrw_style there if you want, see :help settings-netrw
 
 " silent! colorscheme gruvbox
 silent! colorscheme nord
