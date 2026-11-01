@@ -260,6 +260,10 @@ The dotfiles are hidden by default.  To show them: >
     :let g:netrw_hide = 0
 <
 
+Also, each |netrw| buffer is wiped out as soon as you leave it,
+'bufhidden' set to delete, otherwise Vim may hang on |:q| with old
+explorer buffers in the background.
+
 The listing style is selected with |g:netrw_style|.
 
 KEYBOARD                                                *settings-keyboard*

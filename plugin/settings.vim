@@ -69,6 +69,10 @@ let &wildignore = join(s:hidden_files, ',')
 " Explorer setup, see |settings-netrw|
 call settings#netrw()
 
+" Free the memory of the netrw buffers, otherwise Vim may hang on :q
+" https://vi.stackexchange.com/questions/7889/cannot-exit-vim-even-using-q
+autocmd FileType netrw setl bufhidden=delete
+
 " - Buffer navigation, see |settings-normal-mappings|
 nnoremap <Up> :ls<CR>:b
 nnoremap <Left> :bprevious<CR>
